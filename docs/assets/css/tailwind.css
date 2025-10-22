@@ -1,0 +1,104 @@
+@layer base {
+  :root {
+    --color-primary: #000000;
+    --color-brand: #08206b;
+    --font-body: 'Noto Sans JP', sans-serif;
+    --font-serif: 'Noto Serif JP', serif;
+    --font-sans: 'Zen Kaku Gothic New', sans-serif;
+    --font-lubri: 'WDXL Lubrifont TC', sans-serif;
+  }
+}
+
+/* ここに @import "tailwindcss"; を記述 */
+@import 'tailwindcss';
+
+/* さらに必要なスタイルを追記する場合は、@layer components や utilities を使う */
+@layer components {
+  .text-brand {
+    color: var(--color-brand);
+  }
+  .nav-link {
+    @apply flex-1 px-2 md:px-2 hover:text-gray-400 transition-colors duration-200;
+  }
+
+  .h1 {
+    font-family: var(--font-lubri);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    text-decoration: underline;
+  }
+  .project-title {
+    font-family: var(--font-lubri);
+    font-size: 3rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    color: white;
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+  }
+  .h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+  }
+  .main-text {
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    font-style: normal;
+    line-height: 1.75;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .arrow {
+    position: relative;
+    display: inline-block;
+  }
+  .arrow::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 2px #ffffff; /* 好みで色を変えてください */
+    border-right: solid 2px #ffffff; /* 好みで色を変えてください */
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: -20px;
+  }
+
+  .article {
+    max-width: 860px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    line-height: 1.8;
+  }
+  .article p {
+    @apply text-gray-700 my-3;
+  }
+  .article a {
+    @apply text-gray-600 underline underline-offset-2;
+  }
+  .article img {
+    @apply block w-1/2 max-w-[400px] mx-auto shadow-md;
+  }
+  .article figure {
+    @apply text-center my-8;
+  }
+  .article figcaption {
+    @apply text-sm text-gray-500 mt-2;
+  }
+}
