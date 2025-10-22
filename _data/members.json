@@ -1,0 +1,50 @@
+[
+  {
+    "name": "谷澤 健太",
+    "position": "",
+    "image": "/assets/images/tanizawa.jpg",
+    "bio": "代表、好きなエポキシ樹脂は5052"
+  },
+  {
+    "name": "森田 雅人",
+    "position": "",
+    "image": "/assets/images/morita.jpg",
+    "bio": "副代表、好きなエンドミルはT4346-040AL-030D-50-3F-HDC"
+  },
+  {
+    "name": "松尾 啓史",
+    "position": "",
+    "image": "/assets/images/matsuo.jpg",
+    "bio": "好きな翼型はNACA0012"
+  },
+  {
+    "name": "小家石 楓",
+    "position": "",
+    "image": "/assets/images/koyaishi.jpg",
+    "bio": "好きなエンドミルはT4346-040AL-030D-50-3F-HDC"
+  },
+  {
+    "name": "久保 大地",
+    "position": "",
+    "image": "/assets/images/kubo.jpg",
+    "bio": "好きなサーボはKRS-5034"
+  },
+  {
+    "name": "兵頭 侑樹",
+    "position": "",
+    "image": "/assets/images/hyodo.jpg",
+    "bio": "好きなRGBカメラはRealsenseD435"
+  },
+  {
+    "name": "高山 航輔",
+    "position": "",
+    "image": "/assets/images/takayama.jpg",
+    "bio": "好きなPICは16f1827"
+  },
+  {
+    "name": "森 隼人",
+    "position": "",
+    "image": "/assets/images/mori.jpg",
+    "bio": "好きなPythonライブラリはscipy.interpolate"
+  }
+]

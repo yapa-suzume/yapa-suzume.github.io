@@ -1,0 +1,21 @@
+<div
+  class="relative w-screen h-60 p-4 text-white bg-cover bg-center bg-no-repeat flex items-start justify-center"
+  style="background-image: url('{{ include.src | relative_url }}')"
+>
+  <!-- 背景の暗幕 -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- タイトル -->
+  <div class="relative z-10 text-[3rem] writing-horizontal" style="font-family: var(--font-lubri)">
+    {{ include.label | default: "タイトル" }}
+  </div>
+
+  <!-- コピーライト（指定があるときだけ表示）-->
+  {% if include.copyright %}
+  <div
+    class="absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-gray-400 bg-black/40 px-2 py-0.5 rounded"
+  >
+    © {{ include.copyright }}
+  </div>
+  {% endif %}
+</div>

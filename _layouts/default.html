@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{page.title}} | {{site.title}}</title>
+    <meta name="description" content="九州大学でものづくり活動を行っているサークルです。" />
+    <link rel="stylesheet" href="{{ '/assets/css/tailwind-output.css' | relative_url }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=WDXL+Lubrifont+TC&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    {% if page.math or site.math %}
+    <!-- MathJax v3 推奨 -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['\\(', '\\)']],
+          displayMath: [['$$', '$$']],
+          processEscapes: true,
+        },
+        svg: { fontCache: 'global' },
+      };
+    </script>
+    <script
+      async
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    {% endif %}
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    <main class="mx-auto">{{ content }}</main>
+
+    {% include footer.html %}
+  </body>
+</html>

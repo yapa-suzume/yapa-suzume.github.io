@@ -1,0 +1,19 @@
+<ul class="space-y-6 py-4 px-8 max-w-[860px] mx-auto">
+  {% assign sorted_news = site.posts | sort: "date" | reverse %} {% for post in sorted_news limit:
+  include.limit %}
+  <li class="mx-1 border-l-4 border-gray-500 bg-gray-50 shadow p-4 rounded-md">
+    <div class="text-sm text-gray-500 mb-1">{{ post.date | date: "%Y/%m/%d" }}</div>
+    <div class="font-semibold text-gray-800">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    <div class="mt-2">
+      <a
+        href="{{ post.url | relative_url }}"
+        class="inline-block text-gray-600 border border-gray-500 text-sm px-3 py-1 rounded hover:bg-pink-50 transition-colors duration-200"
+      >
+        記事を読む
+      </a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
